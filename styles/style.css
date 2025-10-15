@@ -1,0 +1,157 @@
+
+
+
+
+h1{display: block;
+    margin: 0 auto;
+    
+}
+body {
+    background: pink;
+
+    @media (min-width: 30em) {
+        background: yellow;
+    }
+}
+
+
+.flexbox
+{ margin-top: 100px;
+    
+       display:flex;
+       align-items: center;
+       
+    
+  
+     
+    
+
+
+
+
+}
+
+
+
+.nav ul
+
+{
+    list-style-type: none;
+    background-color: grey;
+    padding: 0px; 
+    margin: 0px;
+
+}
+
+.nav a{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display : block;
+    text-align: center;
+
+
+}
+
+.nav a:hover{
+    background-color: bisque;
+}
+
+
+
+.flexeen
+
+{   
+    text-align: center;
+   background-color: bisque;
+   width: 25%;
+
+
+}
+
+.flextwee
+
+{    text-align: center;
+    
+   background-color: aqua;
+    width: 75% ;
+
+}
+
+
+.flexboxgelijk{
+
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+
+.teksteen
+
+{   
+    
+   background-color: orange;
+   width: 50%;
+
+
+}
+
+.tekstwee
+
+{    text-align: center;
+    
+   background-color: red;
+    width: 50% ;
+
+}
+
+.test{
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+background-color: white;
+flex-direction: column}
+
+
+.rond{  
+   margin-top:  10em;
+   display: flex;
+    background-color: aqua;
+    width: 300px;
+    height: 60px;
+justify-content: center;
+border: 30px;
+margin: auto;
+border-radius: 10px; 
+margin-bottom: 10em;
+}
+
+.image_slider{
+display: flex;
+    justify-content: center;
+    justify-items: center;
+    overflow-x:auto;
+    overflow-y:hidden;
+    scroll-snap-type:center;
+    gap: 10px;
+    width: 500px;
+    margin:0 auto;
+
+}
+
+.gradientlinear{
+
+background-image: conic-gradient( from 45deg,blue ,red,white,darkblue );
+height:500px;
+
+}
+
+
+.gradientrepeat{
+
+    background-image:repeating-linear-gradient(45deg,yellow,grey) ;
+    height:500px;
+}
