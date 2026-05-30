@@ -1,0 +1,145 @@
+/* Fonts voor het handgeschreven notitieboek gevoel */
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Kalam:wght@400;700&display=swap');
+
+/* Kleuren die vaker terugkomen */
+:root {
+  --paper: #f7f0df;
+  --line-blue: #c8d5e8;
+  --line-red: #e48b8b;
+  --marker-yellow: #f4d75f;
+  --note-green: #e7f3d7;
+  --note-purple: #ebe7ff;
+  --text: #1d1d1d;
+}
+
+/* Algemene reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Pagina achtergrond */
+body {
+  margin: 0;
+  font-family: "Patrick Hand", cursive;
+  background: #d8c2a5;
+  color: var(--text);
+}
+
+/* Het volledige notitieboek */
+.notebook {
+  width: min(1100px, 95%);
+  margin: 0 auto;
+  min-height: 100vh;
+  padding: 4rem 4rem 6rem;
+  position: relative;
+
+  /* papier met blauwe schrijflijnen en rode kantlijn */
+  background:
+    linear-gradient(
+      to right,
+      transparent 90px,
+      var(--line-red) 91px,
+      transparent 93px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--paper) 0px,
+      var(--paper) 31px,
+      var(--line-blue) 32px
+    );
+
+  border-radius: 0 18px 18px 0;
+  box-shadow: 0 20px 60px rgba(0,0,0,.25);
+
+  /* gaatjes/ringband links */
+  &::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    bottom: 0;
+    width: 45px;
+
+    background: radial-gradient(
+      circle,
+      #6b4a2d 6px,
+      transparent 7px
+    );
+
+    background-size: 45px 45px;
+  }
+
+  /* bovenste introductie */
+  .hero {
+    text-align: center;
+    margin-bottom: 4rem;
+
+    h1 {
+      font-family: "Kalam", cursive;
+      font-size: clamp(3rem, 7vw, 6rem);
+      line-height: 1;
+      margin: 0;
+
+      span {
+        display: inline-block;
+        background: var(--marker-yellow);
+        padding: 0 .5rem;
+        transform: rotate(-1deg);
+      }
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+  }
+
+}
+
+
+/* Sticky note voor persoonlijke notities en leerpunten */
+.sticky-note {
+
+  background-color: #f7df83;
+
+  width: 250px;
+
+  padding: 1rem;
+
+  border-radius: .5rem;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,.15);
+
+  transform: rotate(-2deg);
+
+  margin-top: 2rem;
+
+
+  h3 {
+
+    margin-top: 0;
+
+    font-size: 1.5rem;
+
+    font-family: "Kalam", cursive;
+
+  }
+
+
+  p {
+
+    font-size: 1.2rem;
+
+    line-height: 1.4;
+
+  }
+
+
+  &:hover {
+
+    transform: rotate(0deg) scale(1.03);
+
+    transition: .2s ease;
+
+  }
+
+}
